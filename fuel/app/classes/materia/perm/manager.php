@@ -47,6 +47,25 @@ class Perm_Manager
 	}
 
 	/**
+	 * Checks if the currently logged in user is a support user
+	 *
+	 * @return boolean whether or not the current user has the support user role as defined by the Perm_Role class
+	 */
+	static public function is_support_user()
+	{
+		$login_hash = \Session::get('login_hash');
+		$key = 'is_support_user_'.$login_hash;
+		$has_role = (\Fuel::$is_cli === true && ! \Fuel::$is_test) || \Session::get($key, false);
+
+		if ( ! $has_role)
+		{
+			$has_role = self::does_user_have_role([\Materia\Perm_Role::SUPPORT]);
+			\Session::set($key, $has_role);
+		}
+		return $has_role;
+	}
+
+	/**
 	 * Returns true if user has any
 	 *	If no uid is sent, default to the current user
 	 *
