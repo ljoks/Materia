@@ -12,6 +12,7 @@ return [
 		'ng-animate' => [$cdnjs.'angular-animate/1.8.0/angular-animate.min.js'],
 		'jquery'     => [$cdnjs.'jquery/3.5.1/jquery.min.js'],
 		'admin'      => [$static.'admin.js'],
+		'support'    => [$static.'support.js'],
 		'author'     => [$static.'author.js'],
 		'student'    => [$static.'student.js'],
 		'dataTables' => [$static.'vendor/datatables/jquery.dataTables.min.js'],

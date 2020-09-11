@@ -16,7 +16,7 @@ class Controller_Support extends Controller
 		$this->common_before();
 		if ( ! \Materia\Perm_Manager::is_support_user() ) throw new \HttpNotFoundException;
 		Css::push_group('support');
-		Js::push_group(['angular', 'materia', 'admin']);
+		Js::push_group(['angular', 'materia', 'support']);
 		parent::before();
 	}
 

@@ -58,7 +58,7 @@
 			<?php endif; ?>
 
 			<?php if ( !$me->is_guest() && \Materia\Perm_Manager::is_support_user()): ?>
-				<li><a href="/support">Support Dashboard</a></li>
+				<li><a href="/support/user">Support Dashboard</a></li>
 			<?php endif; ?>
 
 			<li ng-if="currentUser.loggedIn">
