@@ -17,6 +17,9 @@ return [
 		'admin' => [
 			$static_css.'admin.css'
 		],
+		'support' => [
+			$static_css.'support.css'
+		],
 		'widget_play' => [
 			$static_css.'widget-play.css',
 			$static_css.'ng-modal.css'

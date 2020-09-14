@@ -32,6 +32,10 @@ const copyList = [
 		to: path.join(pubPath, 'js', 'admin.js')
 	},
 	{
+		from: path.join(srcPath, 'js', 'support.js'),
+		to: path.join(pubPath, 'js', 'support.js')
+	},
+	{
 		from: path.join(srcPath, 'js', 'materia.creatorcore.js'),
 		to: path.join(pubPath, 'js', 'materia.creatorcore.js')
 	},

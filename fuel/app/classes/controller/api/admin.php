@@ -10,7 +10,7 @@ class Controller_Api_Admin extends Controller_Rest
 
 	public function before()
 	{
-		if ( ! \Materia\Perm_Manager::is_super_user() ) throw new \HttpNotFoundException;
+		if ( ! (\Materia\Perm_Manager::is_super_user() || \Materia\Perm_Manager::is_support_user() ) ) throw new \HttpNotFoundException;
 		parent::before();
 	}
 

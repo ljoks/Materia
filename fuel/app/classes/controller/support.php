@@ -26,4 +26,13 @@ class Controller_Support extends Controller
 		$this->theme->set_partial('footer', 'partials/angular_alert');
 		$this->theme->set_partial('content', 'partials/support/user');
 	}
+
+	public function get_widget()
+	{
+		$this->theme->get_template()->set('title', 'Widget Support');
+		$this->theme->set_partial('footer', 'partials/angular_alert');
+		$this->theme->set_partial('content', 'partials/support/widget')
+			->set('upload_enabled', Config::get('materia.enable_admin_uploader', false))
+			->set('heroku_warning', Config::get('materia.heroku_admin_warning', false));
+	}
 }
